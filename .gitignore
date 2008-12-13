@@ -1,3 +1,5 @@
 nbproject
 config/database.yml
 .DS_Store
+logs/
+db/development.sqlite3
