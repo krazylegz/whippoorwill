@@ -6,7 +6,7 @@ class Users < ActiveRecord::Migration
 			table.string :display_name, :null => false
 			table.string :email_address, :null => false
 			table.string :url, :null => false
-			table.string :class, :null => false
+			table.string :type, :null => false
 			table.timestamps
 		end
 	end

@@ -1,0 +1,18 @@
+<p>
+  <b>Title:</b>
+  <%=h @attachment.title %>
+</p>
+
+<p>
+  <b>File type:</b>
+  <%=h @attachment.file_type %>
+</p>
+
+<p>
+  <b>File data:</b>
+  <%=h @attachment.file_data %>
+</p>
+
+
+<%= link_to 'Edit', edit_attachment_path(@attachment) %> |
+<%= link_to 'Back', attachments_path %>
