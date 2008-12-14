@@ -12,10 +12,10 @@
 ActiveRecord::Schema.define(:version => 20081203082446) do
 
   create_table "attachments", :force => true do |t|
-    t.integer  "post_id",    :limit => 11, :null => false
-    t.string   "title",                    :null => false
-    t.string   "file_type",                :null => false
-    t.binary   "file_data",                :null => false
+    t.integer  "post_id",    :null => false
+    t.string   "title",      :null => false
+    t.string   "file_type",  :null => false
+    t.binary   "file_data",  :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -27,19 +27,19 @@ ActiveRecord::Schema.define(:version => 20081203082446) do
   end
 
   create_table "comments", :force => true do |t|
-    t.integer  "post_id",    :limit => 11, :null => false
-    t.integer  "author_id",  :limit => 11, :null => false
-    t.string   "content",                  :null => false
-    t.string   "status",                   :null => false
+    t.integer  "post_id",    :null => false
+    t.integer  "author_id",  :null => false
+    t.string   "content",    :null => false
+    t.string   "status",     :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "posts", :force => true do |t|
-    t.integer  "category_id", :limit => 11, :null => false
-    t.integer  "author_id",   :limit => 11, :null => false
-    t.string   "title",                     :null => false
-    t.string   "body",                      :null => false
+    t.integer  "category_id", :null => false
+    t.integer  "author_id",   :null => false
+    t.string   "title",       :null => false
+    t.string   "body",        :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -51,8 +51,8 @@ ActiveRecord::Schema.define(:version => 20081203082446) do
   end
 
   create_table "tags_posts", :force => true do |t|
-    t.integer  "tag_id",     :limit => 11, :null => false
-    t.integer  "post",       :limit => 11, :null => false
+    t.integer  "tag_id",     :null => false
+    t.integer  "post",       :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
