@@ -1,0 +1,12 @@
+<h1>Editing commentator</h1>
+
+<% form_for(@commentator) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @commentator %> |
+<%= link_to 'Back', commentators_path %>

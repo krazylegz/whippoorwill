@@ -1,4 +1,18 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :commentators
+
+  map.resources :admins
+
+  map.resources :users
+
+  map.resources :tags
+
+  map.resources :categories
+
+  map.resources :comments
+
+  map.resources :posts
+
   map.resources :attachments
 
   map.resources :users

@@ -1,0 +1,16 @@
+<h1>Create a new post</h1>
+
+<% form_for(@post) do |f| %>
+  <%= f.error_messages %>
+  <div id="post_title">
+    <label for="posts_title">Title</label>
+    <%= f.text_field(:title) %>
+  </div>
+  <div id="post_body">
+    <label for="post_body">Body</label>
+    <%= f.text_area(:body) %>
+  </div>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
