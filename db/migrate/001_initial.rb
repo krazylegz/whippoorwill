@@ -31,7 +31,7 @@ class Initial < ActiveRecord::Migration
 		end
 		create_table :tags_posts do |table|
 			table.integer :tag_id, :null => false
-			table.integer :post, :null => false
+			table.integer :post_id, :null => false
 			table.timestamps
 		end
 		create_table :users do |table|
@@ -40,7 +40,7 @@ class Initial < ActiveRecord::Migration
 			table.string :display_name, :null => false
 			table.string :email_address, :null => false
 			table.string :url, :null => false
-			table.string :type, :null => false
+			table.string :level, :null => false
 			table.timestamps
 		end
 	end
