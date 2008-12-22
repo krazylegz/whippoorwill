@@ -40,7 +40,7 @@ class Initial < ActiveRecord::Migration
 			table.string :display_name, :null => false
 			table.string :email_address, :null => false
 			table.string :url, :null => false
-			table.string :type, :null => false
+			table.string :level, :null => false
 			table.timestamps
 		end
 	end
