@@ -1,4 +1,4 @@
-<h1>Listing Authors</h1>
+<h1>Listing authors</h1>
 
 <table>
   <tr>
@@ -10,13 +10,13 @@
     <td>Actions</td>
   </tr>
 
-<% for author in @authors %>
+<% @authors.each do |author| %>
   <tr>
-    <td><%= author.id %>
-    <td><%= author.password %>
-    <td><%= author.display_name %>
-    <td><%= author.email_address %>
-    <td><%= author.url %>
+    <td><%= author.id %></td>
+    <td><%= author.password %></td>
+    <td><%= author.display_name %></td>
+    <td><%= author.email_address %></td>
+    <td><%= author.url %></td>
     <td><%= link_to 'Show', author %></td>
     <td><%= link_to 'Edit', edit_author_path(author) %></td>
     <td><%= link_to 'Destroy', author, :confirm => 'Are you sure?', :method => :delete %></td>

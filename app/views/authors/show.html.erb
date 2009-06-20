@@ -1,0 +1,14 @@
+<h2><%= @author.display_name %></h2>
+<dl>
+  <dt>Password</dt>
+  <dd><%= @author.password %></dd>
+  <dt>Display Name</dt>
+  <dd><%= @author.display_name %></dd>
+  <dt>Email Address</dt>
+  <dd><%= @author.email_address %></dd>
+  <dt>URL</dt>
+  <dd><%= @author.url %></dd>
+</dl>
+
+<%= link_to 'Edit', edit_author_path(@author) %> |
+<%= link_to 'Back', authors_path %>
