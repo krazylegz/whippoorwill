@@ -3,3 +3,4 @@ config/database.yml
 .DS_Store
 log/
 db/development.sqlite3
+db/schema.rb
