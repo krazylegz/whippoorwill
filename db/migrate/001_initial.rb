@@ -1,46 +1,46 @@
 class Initial < ActiveRecord::Migration
 	def self.up
 		create_table :attachments do |table|
-			table.integer :post_id, :null => false
-			table.string :title, :null => false
-			table.string :file_type, :null => false
-			table.binary :file_data, :null => false
+			table.integer :post_id
+			table.string :title
+			table.string :file_type
+			table.binary :file_data
 			table.timestamps
 		end
 		create_table :categories do |table|
-			table.string :name, :null => false
+			table.string :name
 			table.timestamps
 		end
 		create_table :comments do |table|
-			table.integer :post_id, :null => false
-			table.integer :author_id, :null => false
-			table.string :content, :null => false
-			table.string :status, :null => false
+			table.integer :post_id
+			table.integer :author_id
+			table.string :content
+			table.string :status
 			table.timestamps
 		end
 		create_table :posts do |table|
-			table.integer :category_id, :null => false
-			table.integer :author_id, :null => false
-			table.string :title, :null => false
-			table.string :body, :null => false
+			table.integer :category_id
+			table.integer :author_id
+			table.string :title
+			table.string :body
 			table.timestamps
 		end
 		create_table :tags do |table|
-			table.string :name, :null => false
+			table.string :name
 			table.timestamps
 		end
 		create_table :tags_posts do |table|
-			table.integer :tag_id, :null => false
-			table.integer :post_id, :null => false
+			table.integer :tag_id
+			table.integer :post_id
 			table.timestamps
 		end
 		create_table :users do |table|
-			table.string :login, :null => false
-			table.string :password, :null => false
-			table.string :display_name, :null => false
-			table.string :email_address, :null => false
-			table.string :url, :null => false
-			table.string :level, :null => false
+			table.string :login
+			table.string :password
+			table.string :display_name
+			table.string :email_address
+			table.string :url
+			table.string :level
 			table.timestamps
 		end
 	end
