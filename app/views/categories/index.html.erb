@@ -2,10 +2,15 @@
 
 <table>
   <tr>
+    <td>ID</td>
+    <td>Name</td>
+    <td>Actions</td>
   </tr>
 
 <% for category in @categories %>
   <tr>
+    <td><%= category.id %></td>
+    <td><%= category.name %></td>
     <td><%= link_to 'Show', category %></td>
     <td><%= link_to 'Edit', edit_category_path(category) %></td>
     <td><%= link_to 'Destroy', category, :confirm => 'Are you sure?', :method => :delete %></td>

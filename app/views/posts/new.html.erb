@@ -2,11 +2,19 @@
 
 <% form_for(@post) do |f| %>
   <%= f.error_messages %>
-  <div id="post_title">
-    <label for="posts_title">Title</label>
+  <div id="post_category_div">
+    <label for="post_category">Category</label>
+    <%= select :post, :category_id, Category.all.collect {|c| [c.name, c.id]} %>
+  </div>
+  <div id="post_author_div">
+    <label for="post_author">Author</label>
+    <%= select :post, :author_id, Author.all.collect {|a| [a.display_name, a.id]} %>
+  </div>
+  <div id="post_title_div">
+    <label for="post_title">Title</label>
     <%= f.text_field(:title) %>
   </div>
-  <div id="post_body">
+  <div id="post_body_div">
     <label for="post_body">Body</label>
     <%= f.text_area(:body) %>
   </div>
