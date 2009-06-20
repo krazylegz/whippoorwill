@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+
+  uses_tiny_mce
+
   # GET /posts
   # GET /posts.xml
   def index
